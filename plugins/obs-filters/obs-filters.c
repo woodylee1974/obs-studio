@@ -29,10 +29,12 @@ extern struct obs_source_info compressor_filter;
 extern struct obs_source_info limiter_filter;
 extern struct obs_source_info expander_filter;
 extern struct obs_source_info luma_key_filter;
+extern struct obs_source_info calibr_filter;
 
 bool obs_module_load(void)
 {
 	obs_register_source(&mask_filter);
+	obs_register_source(&calibr_filter);
 	obs_register_source(&crop_filter);
 	obs_register_source(&gain_filter);
 	obs_register_source(&color_filter);
